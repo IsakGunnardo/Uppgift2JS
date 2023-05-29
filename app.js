@@ -17,7 +17,7 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
    
 
    async function chechWeather(city){//hämtar URL //async låter funktionen skicka tillbaks en promise
-    //genom att dela på URL och låta användaren skriva in "city" så kan man hämta data för en plats användaren söker på
+    //genom att dela på URL och låta användaren skriva in "city i inputen" så kan man hämta data för en plats användaren söker på
     const response =  await fetch(apiUrl + document.querySelector(".search input").value +  "&appid=" + apiKey);      
     //await låter funktionen vänta på en promise
     if(response.status == 404){

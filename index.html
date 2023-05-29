@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML, CSS, JavaScript, WeatherData">
+  <meta name="description" content="Webpage where you can search the temprature of a specific place">
+  <meta name="author" content="Isak Gunnardo">
+
+  <title>Väder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body><!--Kod som är hårdkodad i HTML-->
+  <div class="weather-container "><!--Container som har allt innehåll-->
+    <div class="time-date"><!-- Tid och datum GMT+2-->
+      <h5 class="time">Tid visas här</h5>
+      <h5 class="date">Datum visas här</h5>
+    </div>
+    <div class="search"><!--Låter användaren skriva in en plats-->
+      <input type="text" placeholder="Skriv in en plats">
+      <button><img width="20%" src="/weathericon/search.png"
+          alt="Search Icon"></button><!--eventknapp som söker efter plats-->
+
+    </div>
+
+    <div class="error"><!--Visar ett felmedelande om plats inte funkar-->
+      <p>Invalid location</p>
+    </div>
+    <div class="weather">
+      <img width="80%" src="" class="weather-icon"
+        alt="weather Icon"><!--Väder Icon som byter när väderförhållande ändras-->
+      <p class="description">väderförhållande</p><!--Visar väder förhållande -->
+      <h1 class="temp">22°c</h1><!--Visar temperatur-->
+      <h2 class="city">Vetlanda</h2><!--Visar plats-->
+      <div class="details"><!--Visar väder detaljer samt landskod-->
+        <div class="weather-details">
+          <img src="/weathericon/humidty.webp" alt="weather Icon">
+          <div>
+            <p class="humidity">50%</p>
+            <p>Luftfuktighet</p>
+          </div>
+          <div class="weather-details">
+            <img src="/weathericon/atmospheric-pressure--v1.png" alt="Wind Icon">
+            <div>
+              <p class="pressure">1012 hPa</p>
+              <p>Lufttryck</p>
+            </div>
+            <div class="weather-details">
+              <img src="/weathericon/wind.png" alt="Wind Icon">
+              <div>
+                <p class="wind">15 km/h</p>
+                <p>Vind</p>
+              </div>
+              <div>
+                <p class="countryCode"></p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div>
+        <p><a href="https://openweathermap.org/">https://openweathermap.org/</a></p>
+        <!--länkar till hemsida där jag hämtat API-->
+      </div>
+      <script src="app.js"></script>
+</body>
+
+</html>
